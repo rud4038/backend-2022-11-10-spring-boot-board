@@ -41,3 +41,4 @@ public class MemberEntity {
 	private String telNumber;
 	private String address;
 }
+

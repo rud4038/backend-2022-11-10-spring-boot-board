@@ -1,5 +1,7 @@
 package com.kyungsu.board.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +28,11 @@ public class UserController {
 	@PostMapping("")
 	public ResponseDto<ResultResponseDto> postUser(@RequestBody PostUserDto requestBody) {
 		return userService.postUser(requestBody);
+	}
+	
+	@GetMapping("")
+	public ResponseDto<List<GetUserResponseDto>> getAllUser() {
+		return userService.getAllUser();
 	}
 	
 	@GetMapping("{email}")
